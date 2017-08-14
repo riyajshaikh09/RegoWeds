@@ -1,0 +1,11 @@
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\RTS.Weds.DataAcess.Dapper.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\RTS.Weds.DataAcess.Dapper.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\Dapper.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\DapperExtensions.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\RTS.Weds.Common.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\RTS.Weds.Common.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\Dapper.xml
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\bin\Release\DapperExtensions.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\obj\Release\RTS.Weds.DataAcess.Dapper.csprojResolveAssemblyReference.cache
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\obj\Release\RTS.Weds.DataAcess.Dapper.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.DataAcess.Dapper\obj\Release\RTS.Weds.DataAcess.Dapper.pdb

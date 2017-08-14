@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RTSWedsContextStoreContainer" CdmEntityContainer="RTSWedsEntities">
+    <EntitySetMapping Name="Canditate_Personal">
+      <EntityTypeMapping TypeName="RTSWedsContext.Canditate_Personal">
+        <MappingFragment StoreEntitySet="Canditate_Personal">
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MaritialStatus" ColumnName="MaritialStatus" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Complexion" ColumnName="Complexion" />
+          <ScalarProperty Name="FoodHabits" ColumnName="FoodHabits" />
+          <ScalarProperty Name="PhysicalDisability" ColumnName="PhysicalDisability" />
+          <ScalarProperty Name="PhysicalDisabilityDetails" ColumnName="PhysicalDisabilityDetails" />
+          <ScalarProperty Name="specs" ColumnName="specs" />
+          <ScalarProperty Name="lens" ColumnName="lens" />
+          <ScalarProperty Name="CandidateDescription" ColumnName="CandidateDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddressDetails">
+      <EntityTypeMapping TypeName="RTSWedsContext.AddressDetail">
+        <MappingFragment StoreEntitySet="AddressDetails">
+          <ScalarProperty Name="CandidateAddressId" ColumnName="CandidateAddressId" />
+          <ScalarProperty Name="ResidentAddress" ColumnName="ResidentAddress" />
+          <ScalarProperty Name="PermenentAddress" ColumnName="PermenentAddress" />
+          <ScalarProperty Name="CanctactNo1" ColumnName="CanctactNo1" />
+          <ScalarProperty Name="CanctactNo2" ColumnName="CanctactNo2" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BirthDetails">
+      <EntityTypeMapping TypeName="RTSWedsContext.BirthDetail">
+        <MappingFragment StoreEntitySet="BirthDetails">
+          <ScalarProperty Name="CandidateBirthDetailsId" ColumnName="CandidateBirthDetailsId" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="TimeOfBirth" ColumnName="TimeOfBirth" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EducationDetails">
+      <EntityTypeMapping TypeName="RTSWedsContext.EducationDetail">
+        <MappingFragment StoreEntitySet="EducationDetails">
+          <ScalarProperty Name="CandidateEducationId" ColumnName="CandidateEducationId" />
+          <ScalarProperty Name="QualificationType" ColumnName="QualificationType" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="OccupationCityCountry" ColumnName="OccupationCityCountry" />
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpectationDetails">
+      <EntityTypeMapping TypeName="RTSWedsContext.ExpectationDetail">
+        <MappingFragment StoreEntitySet="ExpectationDetails">
+          <ScalarProperty Name="CandidateExpectationDetailsId" ColumnName="CandidateExpectationDetailsId" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Surmane" ColumnName="Surmane" />
+          <ScalarProperty Name="OccupationAndIncome" ColumnName="OccupationAndIncome" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="AgeDiffrence" ColumnName="AgeDiffrence" />
+          <ScalarProperty Name="CitiesArea" ColumnName="CitiesArea" />
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamilyDetails">
+      <EntityTypeMapping TypeName="RTSWedsContext.FamilyDetail">
+        <MappingFragment StoreEntitySet="FamilyDetails">
+          <ScalarProperty Name="CandidateFamilyDetailsId" ColumnName="CandidateFamilyDetailsId" />
+          <ScalarProperty Name="Father" ColumnName="Father" />
+          <ScalarProperty Name="Mother" ColumnName="Mother" />
+          <ScalarProperty Name="Brothers" ColumnName="Brothers" />
+          <ScalarProperty Name="Sisters" ColumnName="Sisters" />
+          <ScalarProperty Name="MarriedBrothers" ColumnName="MarriedBrothers" />
+          <ScalarProperty Name="MarriedSisters" ColumnName="MarriedSisters" />
+          <ScalarProperty Name="RelativeSurnames" ColumnName="RelativeSurnames" />
+          <ScalarProperty Name="ParentOccupation" ColumnName="ParentOccupation" />
+          <ScalarProperty Name="FamilyProperty" ColumnName="FamilyProperty" />
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

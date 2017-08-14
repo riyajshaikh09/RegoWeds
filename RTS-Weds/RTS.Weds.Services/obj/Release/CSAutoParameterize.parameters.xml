@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="RTSWedsEntities-Web.config Connection String" description="RTSWedsEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/RtsWeds.csdl|res://*/RtsWeds.ssdl|res://*/RtsWeds.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\ProjectsV13;initial catalog=RTSWeds;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\TestApps\\RegoProjs\\RTS-Weds\\RTS\.Weds\.Services\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RTSWedsEntities']/@connectionString" />
+  </parameter>
+</parameters>

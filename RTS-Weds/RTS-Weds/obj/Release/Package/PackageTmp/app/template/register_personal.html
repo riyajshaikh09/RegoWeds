@@ -1,0 +1,192 @@
+<md-toolbar class="md-accent">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button"
+                   aria-label="Settings"
+                   >
+            <i class="material-icons">wc</i>
+        </md-button>
+        <h3>Personal Information</h3>
+        <span flex></span>
+      
+    </div>
+</md-toolbar>
+
+
+
+<md-content layout-padding>
+
+    <form name="userForm">
+
+        <div layout="row" layout-sm="column">
+            <div flex="25">
+                <!--<md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <label class=" md-headline"> <i class="material-icons">camera_enhance</i> </label>
+
+                            <span class="md-subhead"></span>
+
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content layout="row" layout-align="space-between">
+                        <div class="md-media-xl card-media">
+                            <i class="material-icons">add_a_photo</i>
+                        </div>
+
+
+                    </md-card-content>
+                </md-card>-->
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <i class="material-icons">account_circle</i>
+                        </md-card-avatar>
+                        <md-card-header-text>
+                            <span class="md-title">Condidate Id</span>
+                            <span class="md-subhead">{{ user.CandidateId}}</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <div style="height:350px; width:350px">
+                        
+                        <input file-model = "myFile" ng-model="user.userImage" class="ng-hide" id="input-file-id" multiple type="file" />
+                        <img style="height:350px; width:320px" ng-show="isUserImageAvailable" ng-src="{{user.ImageData}}" class="md-card-image" alt="Profile Pic">
+                        <i ng-show="!isUserImageAvailable" style="padding:42%" class="material-icons">add_a_photo</i>
+                       <!-- <img ng-show="!isUserImageAvailable" style="height:350px; width:350px" ng-src="{{user.userImage}}" class="md-card-image" alt="Washed Out">-->
+                       
+                    </div>
+                    
+                    <upload-file></upload-file>
+                </md-card>
+            </div>
+            <div flex>
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>First name</label>
+                        <input ng-model="user.FirstName">
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Middle Name </label>
+                        <input ng-model="user.middleName">
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Last Name</label>
+                        <input ng-model="user.LastName">
+                    </md-input-container>
+                </div>
+
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Gender</label>
+                        <md-select ng-model="user.Gender">
+                            <md-option ng-repeat="gender in genders" value="{{gender}}">
+                                {{gender}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Maritial Status</label>
+                        <md-select ng-model="user.MaritialStatus">
+                            <md-option ng-repeat="mstatus in maritialStatus" value="{{mstatus}}">
+                                {{mstatus}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Height(in CM)</label>
+                        <input ng-model="user.Height">
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Weight (in KG) </label>
+                        <input ng-model="user.Weight">
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Blood Group</label>
+                        <md-select ng-model="user.BloodGroup">
+                            <md-option ng-repeat="bloodGroup in bloodGroupList" value="{{bloodGroup}}">
+                                {{bloodGroup}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+
+
+
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Food Habits</label>
+                        <md-select ng-model="user.FoodHabits">
+                            <md-option ng-repeat="foodHabit in foodHabits" value="{{foodHabit}}">
+                                {{foodHabit}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Skin Complexion</label>
+                        <md-select ng-model="user.Complexion">
+                            <md-option ng-repeat="skinComplexion in skinComplexions" value="{{skinComplexion}}">
+                                {{skinComplexion}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+
+
+                </div>
+
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Do You have Lens?</label>
+                        <md-switch ng-model="user.lens" aria-label="lens" ng-init="user.lens='Nope'" ng-true-value="'Yes'" ng-false-value="'Nope'" class="md-warn">
+                            {{ user.lens }}
+                        </md-switch>
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Do You have Specs?</label>
+                        <md-switch ng-model="user.specs" aria-label="specs" ng-init="user.specs='Nope'" ng-true-value="'Yes'" ng-false-value="'Nope'" class="md-warn">
+                            {{ user.specs }}
+                        </md-switch>
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Are You Physically Disabled?</label>
+                        <md-switch ng-model="user.PhysicalDisability" ng-init="user.PhysicalDisability='Nope'" aria-label="disabled" ng-true-value="'Yes'" ng-false-value="'Nope'" class="md-warn">
+                            {{ user.PhysicalDisability }}
+                        </md-switch>
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Disability Details</label>
+                        <input ng-model="user.PhysicalDisabilityDetails" ng-disabled="user.PhysicalDisability=='Nope'">
+                    </md-input-container>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <md-input-container class="md-block">
+            <label>Personal Details</label>
+            <textarea ng-model="user.CandidateDescription" md-maxlength="150" rows="3" md-select-on-focus></textarea>
+        </md-input-container>
+        <div layout-lg="row">
+            <span flex></span> 
+            <md-button ng-click="showSimpleToast('asjkaldjhasdjalk dalksdjlddjlasdj')">
+                Show Simple
+            </md-button>
+              <md-button ng-disabled="!disableAddButton" class="md-raised md-primary" ng-click="registerCandidate()">Create Profile</md-button>
+            </div>
+</form>
+
+</md-content>
+

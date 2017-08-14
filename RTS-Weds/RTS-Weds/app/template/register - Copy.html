@@ -1,0 +1,290 @@
+<div>
+    <div ng-include="'app/template/register_personal.html'"></div>
+    
+  
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       ng-click="ctrl.showToolbarMenu($event, ctrl.settings)">
+                <i class="material-icons">event</i>
+            </md-button>
+          
+            <h3>Birth Details</h3>
+            <span flex></span>
+          
+        </div>
+    </md-toolbar>
+
+    <md-content layout-padding>
+
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Date of Birth</label>
+                <md-datepicker ng-model="user.dateOfBirth"></md-datepicker>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Place of Birth</label>
+                <input ng-model="user.birthPlace">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Birth Time</label>
+                <input type="time" id="exampleInput" name="input" ng-model="example.value"
+                       placeholder="Birth Time"  required />
+                
+            </md-input-container>
+        </div>
+    </md-content>
+
+
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       ng-click="ctrl.showToolbarMenu($event, ctrl.settings)">
+                <i class="material-icons">my_location</i>
+            </md-button>
+
+            <h3>Adress Details</h3>
+            <span flex></span>
+
+        </div>
+    </md-toolbar>
+
+    <md-content layout-padding>
+
+        <div layout-lg="row">
+
+            <md-input-container class="md-block">
+               
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Residential Address</label>
+                <textarea ng-model="user.resAddress" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Permenent Address</label>
+                <textarea ng-model="user.permAddress" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+
+           
+        </div>
+
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Email id</label>
+                <input ng-model="user.emailId" type="email">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Contact # (Primary)</label>
+                <input ng-model="user.contactno1">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Contact # (Secondary)</label>
+                <input ng-model="user.contactno2">
+            </md-input-container>
+            </div>
+</md-content>
+
+
+
+
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       ng-click="ctrl.showToolbarMenu($event, ctrl.settings)">
+                <i class="material-icons">school</i>
+            </md-button>
+
+            <h3>Education Details</h3>
+            <span flex></span>
+
+        </div>
+    </md-toolbar>
+
+    <md-content layout-padding>
+
+        <div layout-lg="row">
+
+            <md-input-container class="md-block">
+
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Qualification Type</label>
+                <md-select ng-model="user.qualificationType">
+                    <md-option ng-repeat="qualificationType in qualificationTypes" value="{{qualificationType}}">
+                        {{qualificationType}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Qualification</label>
+                <input ng-model="user.qualification"></input>
+            </md-input-container>
+
+
+        </div>
+
+        <div layout-lg="row">
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Occupation/Job</label>
+                <input ng-model="user.occupation">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>OccupationJob (City/State/Contry)</label>
+                <input ng-model="user.occupationLocation">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Salary (Monthly Income)</label>
+                <input ng-model="user.income">
+            </md-input-container>
+        </div>
+    </md-content>
+
+
+
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       ng-click="ctrl.showToolbarMenu($event, ctrl.settings)">
+                <i class="material-icons">people</i>
+            </md-button>
+
+            <h3>Family Details</h3>
+            <span flex></span>
+
+        </div>
+    </md-toolbar>
+
+    <md-content layout-padding>
+
+        <div layout-lg="row">
+
+            <md-input-container class="md-block">
+
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Father</label>
+                <md-select ng-model="user.father">
+                    <md-option ng-repeat="choice in choices" value="{{choice}}">
+                        {{choice}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Mother</label>
+                <md-select ng-model="user.mother">
+                    <md-option ng-repeat="choice in choices" value="{{choice}}">
+                        {{choice}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Brothers</label>
+                <input ng-model="user.brothers" type="number"></input>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Sisters</label>
+                <input ng-model="user.sisters" type="number"></input>
+            </md-input-container>
+
+        </div>
+
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Married Brother(s)</label>
+                <input ng-model="user.brothersMarried" type="number">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Married Sister(s)</label>
+                <input ng-model="user.sistersMarried" type="number">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Relative Surmane(s)</label>
+                <input ng-model="user.relativeSurnames" >
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Parent Occupation</label>
+                <input ng-model="user.parentOccupation" >
+            </md-input-container>
+        </div>
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Family Property</label>
+                <textarea ng-model="user.propertyDetails" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+        </div>
+    </md-content>
+
+
+
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       ng-click="ctrl.showToolbarMenu($event, ctrl.settings)">
+                <i class="material-icons">check</i>
+            </md-button>
+
+            <h3>Expectation Details</h3>
+            <span flex></span>
+
+        </div>
+    </md-toolbar>
+
+    <md-content layout-padding>
+
+        <div layout-lg="row">
+
+            
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Height</label>
+                <input ng-model="user.expHeight">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Surname(s)</label>
+                <input ng-model="user.expSurnames">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Age Difference (Year)</label>
+                <input ng-model="user.expAgeDifference" type="number">
+            </md-input-container>
+
+        </div>
+
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Education</label>
+                <input ng-model="user.expEducation" >
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Occupation and Income (Per month)</label>
+                <input ng-model="user.expOccupassionIcome" >
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Citie (s)</label>
+                <input ng-model="user.expCities">
+            </md-input-container>
+
+        </div>
+        
+    </md-content>
+
+
+ 
+</div>

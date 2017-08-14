@@ -1,0 +1,13 @@
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\RTS.Weds.Business.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\RTS.Weds.Business.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\RTS.Weds.Common.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\RTS.Weds.DataAcess.Dapper.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\DapperExtensions.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\Dapper.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\RTS.Weds.Common.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\RTS.Weds.DataAcess.Dapper.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\DapperExtensions.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\bin\Debug\Dapper.xml
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\obj\Debug\RTS.Weds.Business.csprojResolveAssemblyReference.cache
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\obj\Debug\RTS.Weds.Business.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Business\obj\Debug\RTS.Weds.Business.pdb

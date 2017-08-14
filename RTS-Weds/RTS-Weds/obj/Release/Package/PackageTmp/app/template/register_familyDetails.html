@@ -1,0 +1,82 @@
+
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       >
+                <i class="material-icons">people</i>
+            </md-button>
+
+            <h3>Family Details</h3>
+            <span flex></span>
+
+        </div>
+    </md-toolbar>
+
+    <md-content layout-padding>
+
+        <div layout-lg="row">
+
+            <md-input-container class="md-block">
+
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Father</label>
+                <md-select ng-model="familyDetails.Father">
+                    <md-option ng-repeat="choice in choices" value="{{choice}}">
+                        {{choice}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Mother</label>
+                <md-select ng-model="familyDetails.Mother">
+                    <md-option ng-repeat="choice in choices" value="{{choice}}">
+                        {{choice}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Brother(s)</label>
+                <input ng-model="familyDetails.Brothers" type="number">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Sister(s)</label>
+                <input ng-model="familyDetails.Sisters" type="number" value="0">
+            </md-input-container>
+
+        </div>
+
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Married Brother(s)</label>
+                <input ng-model="familyDetails.MarriedBrothers" type="number">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Married Sister(s)</label>
+                <input ng-model="familyDetails.MarriedSisters" type="number">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Relative Surmane(s)</label>
+                <input ng-model="familyDetails.RelativeSurnames" >
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Parent Occupation</label>
+                <input ng-model="familyDetails.ParentOccupation" >
+            </md-input-container>
+        </div>
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Family Property</label>
+                <textarea ng-model="familyDetails.FamilyProperty" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+        </div>
+    </md-content>
+
+<div layout-lg="row">
+    <span flex></span>
+    <md-button ng-disabled="disableAddButton" class="md-raised md-primary" ng-click="addFamilyDetails()">Save </md-button>
+</div>  

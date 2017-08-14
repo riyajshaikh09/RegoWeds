@@ -1,0 +1,5 @@
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Common\bin\Debug\RTS.Weds.Common.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Common\bin\Debug\RTS.Weds.Common.pdb
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Common\obj\Debug\RTS.Weds.Common.csprojResolveAssemblyReference.cache
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Common\obj\Debug\RTS.Weds.Common.dll
+D:\TestApps\RegoProjs\RTS-Weds\RTS.Weds.Common\obj\Debug\RTS.Weds.Common.pdb

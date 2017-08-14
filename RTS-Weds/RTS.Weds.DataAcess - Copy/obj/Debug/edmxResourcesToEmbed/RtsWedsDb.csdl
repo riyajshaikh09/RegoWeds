@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RTSWedsContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Canditate_Personal">
+    <Key>
+      <PropertyRef Name="CandidateId" />
+    </Key>
+    <Property Name="CandidateId" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaritialStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Weight" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BloodGroup" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Complexion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FoodHabits" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PhysicalDisability" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PhysicalDisabilityDetails" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="specs" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="lens" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CandidateDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AddressDetails" Relationship="Self.FK__AddressDe__Candi__286302EC" FromRole="Canditate_Personal" ToRole="AddressDetails" />
+    <NavigationProperty Name="BirthDetails" Relationship="Self.FK__BirthDeta__Candi__24927208" FromRole="Canditate_Personal" ToRole="BirthDetails" />
+    <NavigationProperty Name="EducationDetails" Relationship="Self.FK__Education__Candi__267ABA7A" FromRole="Canditate_Personal" ToRole="EducationDetails" />
+    <NavigationProperty Name="ExpectationDetails" Relationship="Self.FK__Expectati__Candi__2C3393D0" FromRole="Canditate_Personal" ToRole="ExpectationDetails" />
+    <NavigationProperty Name="FamilyDetails" Relationship="Self.FK__FamilyDet__Candi__2A4B4B5E" FromRole="Canditate_Personal" ToRole="FamilyDetails" />
+  </EntityType>
+  <EntityType Name="AddressDetail">
+    <Key>
+      <PropertyRef Name="CandidateAddressId" />
+    </Key>
+    <Property Name="CandidateAddressId" Type="Int32" Nullable="false" />
+    <Property Name="ResidentAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PermenentAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CanctactNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CanctactNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CandidateId" Type="Int32" />
+    <NavigationProperty Name="Canditate_Personal" Relationship="Self.FK__AddressDe__Candi__286302EC" FromRole="AddressDetails" ToRole="Canditate_Personal" />
+  </EntityType>
+  <EntityType Name="BirthDetail">
+    <Key>
+      <PropertyRef Name="CandidateBirthDetailsId" />
+    </Key>
+    <Property Name="CandidateBirthDetailsId" Type="Int32" Nullable="false" />
+    <Property Name="DateOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TimeOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CandidateId" Type="Int32" />
+    <NavigationProperty Name="Canditate_Personal" Relationship="Self.FK__BirthDeta__Candi__24927208" FromRole="BirthDetails" ToRole="Canditate_Personal" />
+  </EntityType>
+  <EntityType Name="EducationDetail">
+    <Key>
+      <PropertyRef Name="CandidateEducationId" />
+    </Key>
+    <Property Name="CandidateEducationId" Type="Int32" Nullable="false" />
+    <Property Name="QualificationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OccupationCityCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CandidateId" Type="Int32" />
+    <NavigationProperty Name="Canditate_Personal" Relationship="Self.FK__Education__Candi__267ABA7A" FromRole="EducationDetails" ToRole="Canditate_Personal" />
+  </EntityType>
+  <EntityType Name="ExpectationDetail">
+    <Key>
+      <PropertyRef Name="CandidateExpectationDetailsId" />
+    </Key>
+    <Property Name="CandidateExpectationDetailsId" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Surmane" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OccupationAndIncome" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AgeDiffrence" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CitiesArea" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CandidateId" Type="Int32" />
+    <NavigationProperty Name="Canditate_Personal" Relationship="Self.FK__Expectati__Candi__2C3393D0" FromRole="ExpectationDetails" ToRole="Canditate_Personal" />
+  </EntityType>
+  <EntityType Name="FamilyDetail">
+    <Key>
+      <PropertyRef Name="CandidateFamilyDetailsId" />
+    </Key>
+    <Property Name="CandidateFamilyDetailsId" Type="Int32" Nullable="false" />
+    <Property Name="Father" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Mother" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Brothers" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Sisters" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="MarriedBrothers" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="MarriedSisters" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelativeSurnames" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ParentOccupation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FamilyProperty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CandidateId" Type="Int32" />
+    <NavigationProperty Name="Canditate_Personal" Relationship="Self.FK__FamilyDet__Candi__2A4B4B5E" FromRole="FamilyDetails" ToRole="Canditate_Personal" />
+  </EntityType>
+  <Association Name="FK__AddressDe__Candi__286302EC">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="AddressDetails" Type="Self.AddressDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="AddressDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BirthDeta__Candi__24927208">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="BirthDetails" Type="Self.BirthDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="BirthDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Education__Candi__267ABA7A">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="EducationDetails" Type="Self.EducationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="EducationDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expectati__Candi__2C3393D0">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="ExpectationDetails" Type="Self.ExpectationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="ExpectationDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FamilyDet__Candi__2A4B4B5E">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="FamilyDetails" Type="Self.FamilyDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="FamilyDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RTSWedsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Canditate_Personal" EntityType="Self.Canditate_Personal" />
+    <EntitySet Name="AddressDetails" EntityType="Self.AddressDetail" />
+    <EntitySet Name="BirthDetails" EntityType="Self.BirthDetail" />
+    <EntitySet Name="EducationDetails" EntityType="Self.EducationDetail" />
+    <EntitySet Name="ExpectationDetails" EntityType="Self.ExpectationDetail" />
+    <EntitySet Name="FamilyDetails" EntityType="Self.FamilyDetail" />
+    <AssociationSet Name="FK__AddressDe__Candi__286302EC" Association="Self.FK__AddressDe__Candi__286302EC">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="AddressDetails" EntitySet="AddressDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BirthDeta__Candi__24927208" Association="Self.FK__BirthDeta__Candi__24927208">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="BirthDetails" EntitySet="BirthDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Education__Candi__267ABA7A" Association="Self.FK__Education__Candi__267ABA7A">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="EducationDetails" EntitySet="EducationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expectati__Candi__2C3393D0" Association="Self.FK__Expectati__Candi__2C3393D0">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="ExpectationDetails" EntitySet="ExpectationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FamilyDet__Candi__2A4B4B5E" Association="Self.FK__FamilyDet__Candi__2A4B4B5E">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="FamilyDetails" EntitySet="FamilyDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

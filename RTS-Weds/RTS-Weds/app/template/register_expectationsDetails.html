@@ -1,0 +1,59 @@
+
+<md-toolbar class="md-accent">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button"
+                   aria-label="Settings"
+                   >
+            <i class="material-icons">check</i>
+        </md-button>
+
+        <h3>Expectation Details</h3>
+        <span flex></span>
+
+    </div>
+</md-toolbar>
+
+<md-content layout-padding>
+
+    <div layout-lg="row">
+
+
+
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Height</label>
+            <input ng-model="expectations.ExpHeight">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Surname(s)</label>
+            <input ng-model="expectations.Surmane">
+        </md-input-container>
+
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Age Difference (Year)</label>
+            <input ng-model="expectations.AgeDiffrence" type="number">
+        </md-input-container>
+
+    </div>
+
+    <div layout-lg="row">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Education</label>
+            <input ng-model="expectations.Education">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Occupation and Income (Per month)</label>
+            <input ng-model="expectations.OccupationAndIncome">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Citie (s)</label>
+            <input ng-model="expectations.CitiesArea">
+        </md-input-container>
+
+    </div>
+
+</md-content>
+
+<div layout-lg="row">
+    <span flex></span>
+    <md-button ng-disabled="disableAddButton" class="md-raised md-primary" ng-click="addExpectationDetails()">Save </md-button>
+</div>

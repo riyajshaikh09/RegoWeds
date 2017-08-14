@@ -1,0 +1,48 @@
+<div >
+
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       ng-click="ctrl.showToolbarMenu($event, ctrl.settings)">
+                <i class="material-icons">person_pin</i>
+            </md-button>
+
+            <h3 ng-show="candidateType=='Male'">Grooms</h3>
+            <h3 ng-show="candidateType=='Female'">Brides</h3>
+            <span flex></span>
+
+        </div>
+    </md-toolbar>
+	
+	
+
+    <md-content>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Candidate ID</th>
+                    <th>Date Of Birth</th>
+                    <th>Height (CM)</th>
+                    <th>Residence</th>
+                    <th>Education</th>
+                    <th>Occupation</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="candidate in allCandidatesData">
+                    <td><md-button class="md-accent" ng-click="navigateToDetails(candidate)">{{candidate.CandidateId}}</md-button> </td>
+                    <td>{{candidate.DateOfBirth  | date}}</td>
+                    <td>{{candidate.Height}}</td>
+                    <td>{{candidate.ResidentAddress}}</td>
+                    <td>{{candidate.Qualification}}</td>
+                    <td>{{candidate.Occupation}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </md-content>
+</div>

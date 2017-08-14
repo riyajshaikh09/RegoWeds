@@ -1,0 +1,93 @@
+<div >
+    <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button"
+                       aria-label="Settings"
+                       >
+                <i class="material-icons">search</i>
+            </md-button>
+            <h3>Search</h3>
+            <span flex></span>
+        
+        </div>
+    </md-toolbar>
+	
+
+    <md-content layout-padding>
+
+
+        <div layout-lg="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Candidate Id </label>
+                <input ng-model="searchCriteria.CandidateId">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Gender</label>
+                <md-select ng-model="searchCriteria.Gender">
+                    <md-option ng-repeat="gender in genders" value="{{gender}}">
+                        {{gender}}
+                    </md-option>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Birth Year </label>
+                <input ng-model="searchCriteria.BirthYear">
+            </md-input-container>
+
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Maritial Status</label>
+                <md-select ng-model="searchCriteria.MaritialStatus">
+                    <md-option ng-repeat="mstatus in maritialStatus" value="{{mstatus}}">
+                        {{mstatus}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Residence</label>
+                <input ng-model="searchCriteria.Residence">
+            </md-input-container>
+                      
+        </div>
+    </md-content>
+    <div layout-lg="row">
+        <span flex></span>
+        <md-button class="md-raised md-primary" ng-click="clearCriteria()">Clear</md-button> <md-button class="md-raised md-primary" ng-click="searchCandidates()">Search</md-button>
+    </div>
+    <md-content ng-show="allCandidatesData.length>0">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Candidate ID</th>
+                    <th>Date Of Birth</th>
+                    <th>Height (CM)</th>
+                    <th>Residence</th>
+                    <th>Education</th>
+                    <th>Occupation</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="candidate in allCandidatesData">
+                    <td><md-button class="md-accent" ng-click="navigateToDetails(candidate)">{{candidate.CandidateId}}</md-button> </td>
+                    <td>{{candidate.DateOfBirth  | date}}</td>
+                    <td>{{candidate.Height}}</td>
+                    <td>{{candidate.ResidentAddress}}</td>
+                    <td>{{candidate.Qualification}}</td>
+                    <td>{{candidate.Occupation}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </md-content>
+
+    <md-content ng-hide="allCandidatesData.length>0">
+        <span>No result Found</span>
+    </md-content>
+ 
+	
+</div>

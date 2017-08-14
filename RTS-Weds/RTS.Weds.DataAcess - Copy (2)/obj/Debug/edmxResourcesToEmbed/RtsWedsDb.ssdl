@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RTSWedsContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RTSWeds.dbo.AddressDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AddressDetails">
+    <Key>
+      <PropertyRef Name="CandidateAddressId" />
+    </Key>
+    <Property Name="CandidateAddressId" Type="int" Nullable="false" />
+    <Property Name="ResidentAddress" Type="varchar" MaxLength="500" />
+    <Property Name="PermenentAddress" Type="varchar" MaxLength="500" />
+    <Property Name="CanctactNo1" Type="varchar" MaxLength="50" />
+    <Property Name="CanctactNo2" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="CandidateId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RTSWeds.dbo.BirthDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BirthDetails">
+    <Key>
+      <PropertyRef Name="CandidateBirthDetailsId" />
+    </Key>
+    <Property Name="CandidateBirthDetailsId" Type="int" Nullable="false" />
+    <Property Name="DateOfBirth" Type="varchar" MaxLength="50" />
+    <Property Name="TimeOfBirth" Type="varchar" MaxLength="50" />
+    <Property Name="PlaceOfBirth" Type="varchar" MaxLength="50" />
+    <Property Name="CandidateId" Type="int" />
+  </EntityType>
+  <EntityType Name="Canditate_Personal">
+    <Key>
+      <PropertyRef Name="CandidateId" />
+    </Key>
+    <Property Name="CandidateId" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="255" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="MaritialStatus" Type="varchar" MaxLength="20" />
+    <Property Name="Height" Type="varchar" MaxLength="10" />
+    <Property Name="Weight" Type="varchar" MaxLength="20" />
+    <Property Name="BloodGroup" Type="varchar" MaxLength="5" />
+    <Property Name="Complexion" Type="varchar" MaxLength="10" />
+    <Property Name="FoodHabits" Type="varchar" MaxLength="10" />
+    <Property Name="PhysicalDisability" Type="varchar" MaxLength="10" />
+    <Property Name="PhysicalDisabilityDetails" Type="varchar" MaxLength="100" />
+    <Property Name="specs" Type="varchar" MaxLength="3" />
+    <Property Name="lens" Type="varchar" MaxLength="3" />
+    <Property Name="CandidateDescription" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RTSWeds.dbo.EducationDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EducationDetails">
+    <Key>
+      <PropertyRef Name="CandidateEducationId" />
+    </Key>
+    <Property Name="CandidateEducationId" Type="int" Nullable="false" />
+    <Property Name="QualificationType" Type="varchar" MaxLength="50" />
+    <Property Name="Qualification" Type="varchar" MaxLength="50" />
+    <Property Name="Occupation" Type="varchar" MaxLength="50" />
+    <Property Name="Salary" Type="varchar" MaxLength="20" />
+    <Property Name="OccupationCityCountry" Type="varchar" MaxLength="50" />
+    <Property Name="CandidateId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RTSWeds.dbo.ExpectationDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ExpectationDetails">
+    <Key>
+      <PropertyRef Name="CandidateExpectationDetailsId" />
+    </Key>
+    <Property Name="CandidateExpectationDetailsId" Type="int" Nullable="false" />
+    <Property Name="Height" Type="varchar" MaxLength="20" />
+    <Property Name="Surmane" Type="varchar" MaxLength="500" />
+    <Property Name="OccupationAndIncome" Type="varchar" MaxLength="500" />
+    <Property Name="Education" Type="varchar" MaxLength="50" />
+    <Property Name="AgeDiffrence" Type="varchar" MaxLength="15" />
+    <Property Name="CitiesArea" Type="varchar" MaxLength="500" />
+    <Property Name="CandidateId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RTSWeds.dbo.FamilyDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FamilyDetails">
+    <Key>
+      <PropertyRef Name="CandidateFamilyDetailsId" />
+    </Key>
+    <Property Name="CandidateFamilyDetailsId" Type="int" Nullable="false" />
+    <Property Name="Father" Type="varchar" MaxLength="5" />
+    <Property Name="Mother" Type="varchar" MaxLength="5" />
+    <Property Name="Brothers" Type="varchar" MaxLength="5" />
+    <Property Name="Sisters" Type="varchar" MaxLength="5" />
+    <Property Name="MarriedBrothers" Type="varchar" MaxLength="5" />
+    <Property Name="MarriedSisters" Type="varchar" MaxLength="5" />
+    <Property Name="RelativeSurnames" Type="varchar" MaxLength="500" />
+    <Property Name="ParentOccupation" Type="varchar" MaxLength="250" />
+    <Property Name="FamilyProperty" Type="varchar" MaxLength="250" />
+    <Property Name="CandidateId" Type="int" />
+  </EntityType>
+  <Association Name="FK__AddressDe__Candi__286302EC">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="AddressDetails" Type="Self.AddressDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="AddressDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BirthDeta__Candi__24927208">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="BirthDetails" Type="Self.BirthDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="BirthDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Education__Candi__267ABA7A">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="EducationDetails" Type="Self.EducationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="EducationDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expectati__Candi__2C3393D0">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="ExpectationDetails" Type="Self.ExpectationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="ExpectationDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FamilyDet__Candi__2A4B4B5E">
+    <End Role="Canditate_Personal" Type="Self.Canditate_Personal" Multiplicity="0..1" />
+    <End Role="FamilyDetails" Type="Self.FamilyDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canditate_Personal">
+        <PropertyRef Name="CandidateId" />
+      </Principal>
+      <Dependent Role="FamilyDetails">
+        <PropertyRef Name="CandidateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RTSWedsContextStoreContainer">
+    <EntitySet Name="Canditate_Personal" EntityType="Self.Canditate_Personal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AddressDetails" EntityType="Self.AddressDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AddressDetails].[CandidateAddressId] AS [CandidateAddressId], 
+    [AddressDetails].[ResidentAddress] AS [ResidentAddress], 
+    [AddressDetails].[PermenentAddress] AS [PermenentAddress], 
+    [AddressDetails].[CanctactNo1] AS [CanctactNo1], 
+    [AddressDetails].[CanctactNo2] AS [CanctactNo2], 
+    [AddressDetails].[EmailId] AS [EmailId], 
+    [AddressDetails].[CandidateId] AS [CandidateId]
+    FROM [dbo].[AddressDetails] AS [AddressDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BirthDetails" EntityType="Self.BirthDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BirthDetails].[CandidateBirthDetailsId] AS [CandidateBirthDetailsId], 
+    [BirthDetails].[DateOfBirth] AS [DateOfBirth], 
+    [BirthDetails].[TimeOfBirth] AS [TimeOfBirth], 
+    [BirthDetails].[PlaceOfBirth] AS [PlaceOfBirth], 
+    [BirthDetails].[CandidateId] AS [CandidateId]
+    FROM [dbo].[BirthDetails] AS [BirthDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EducationDetails" EntityType="Self.EducationDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EducationDetails].[CandidateEducationId] AS [CandidateEducationId], 
+    [EducationDetails].[QualificationType] AS [QualificationType], 
+    [EducationDetails].[Qualification] AS [Qualification], 
+    [EducationDetails].[Occupation] AS [Occupation], 
+    [EducationDetails].[Salary] AS [Salary], 
+    [EducationDetails].[OccupationCityCountry] AS [OccupationCityCountry], 
+    [EducationDetails].[CandidateId] AS [CandidateId]
+    FROM [dbo].[EducationDetails] AS [EducationDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ExpectationDetails" EntityType="Self.ExpectationDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ExpectationDetails].[CandidateExpectationDetailsId] AS [CandidateExpectationDetailsId], 
+    [ExpectationDetails].[Height] AS [Height], 
+    [ExpectationDetails].[Surmane] AS [Surmane], 
+    [ExpectationDetails].[OccupationAndIncome] AS [OccupationAndIncome], 
+    [ExpectationDetails].[Education] AS [Education], 
+    [ExpectationDetails].[AgeDiffrence] AS [AgeDiffrence], 
+    [ExpectationDetails].[CitiesArea] AS [CitiesArea], 
+    [ExpectationDetails].[CandidateId] AS [CandidateId]
+    FROM [dbo].[ExpectationDetails] AS [ExpectationDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FamilyDetails" EntityType="Self.FamilyDetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FamilyDetails].[CandidateFamilyDetailsId] AS [CandidateFamilyDetailsId], 
+    [FamilyDetails].[Father] AS [Father], 
+    [FamilyDetails].[Mother] AS [Mother], 
+    [FamilyDetails].[Brothers] AS [Brothers], 
+    [FamilyDetails].[Sisters] AS [Sisters], 
+    [FamilyDetails].[MarriedBrothers] AS [MarriedBrothers], 
+    [FamilyDetails].[MarriedSisters] AS [MarriedSisters], 
+    [FamilyDetails].[RelativeSurnames] AS [RelativeSurnames], 
+    [FamilyDetails].[ParentOccupation] AS [ParentOccupation], 
+    [FamilyDetails].[FamilyProperty] AS [FamilyProperty], 
+    [FamilyDetails].[CandidateId] AS [CandidateId]
+    FROM [dbo].[FamilyDetails] AS [FamilyDetails]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__AddressDe__Candi__286302EC" Association="Self.FK__AddressDe__Candi__286302EC">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="AddressDetails" EntitySet="AddressDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BirthDeta__Candi__24927208" Association="Self.FK__BirthDeta__Candi__24927208">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="BirthDetails" EntitySet="BirthDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Education__Candi__267ABA7A" Association="Self.FK__Education__Candi__267ABA7A">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="EducationDetails" EntitySet="EducationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expectati__Candi__2C3393D0" Association="Self.FK__Expectati__Candi__2C3393D0">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="ExpectationDetails" EntitySet="ExpectationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FamilyDet__Candi__2A4B4B5E" Association="Self.FK__FamilyDet__Candi__2A4B4B5E">
+      <End Role="Canditate_Personal" EntitySet="Canditate_Personal" />
+      <End Role="FamilyDetails" EntitySet="FamilyDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

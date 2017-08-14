@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="RTSWeds">
+<head>
+    <!--Add Material CSS and JS-->
+
+    <link href="Content/angular-material.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <!-- SPELLS -->
+    <!-- Angular Material Javascript now available via Google CDN; version 0.9.4 used here -->
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-material.min.js"></script>
+  <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-aria.min.js"></script>
+  <script src="Scripts/jquery.min.js"></script>
+    <script src="app/appConfig.js"></script>
+
+    <!-- Add All Controolers Here-->
+    <script src="app/Controller/aboutCtrl.js"></script>
+    <script src="app/Controller/bridesCtrl.js"></script>
+    <script src="app/Controller/contactCtrl.js"></script>
+    <script src="app/Controller/detailsCtrl.js"></script>
+    <script src="app/Controller/groomsCtrl.js"></script>
+    <script src="app/Controller/searchCtrl.js"></script>
+    <script src="app/Controller/candidateCtrl.js"></script>
+    <script src="app/Controller/registerCtrl.js"></script>
+    <!--Add All Services Here-->
+    <script src="app/Service/candidateDataService.js"></script>
+
+
+    <!--Add All directives here..-->
+    <script src="app/directive/uploadFile.js"></script>
+
+</head>
+<!-- define angular controller -->
+<body ng-cloak="" class="navBardemoBasicUsage" ng-controller="mainController">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MATRI Website</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="#">Home</a></li>
+                    <li><a href="#brides">Brides</a></li>
+                    <li><a href="#grooms">Grooms</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#about">Rules</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="main" class="container">
+        <div id="messageCenterdiv">Test Div</div>
+        <div ng-view></div>
+
+    </div>
+
+    <footer class="text-center"></footer>
+
+</body>
+</html>
+
